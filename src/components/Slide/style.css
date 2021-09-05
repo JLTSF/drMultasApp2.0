@@ -1,0 +1,7 @@
+.container-slide {
+  width: 100vw;
+  height: 21.25rem;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}

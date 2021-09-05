@@ -1,0 +1,78 @@
+.container-listbar {
+  width: calc(100vw - 20rem);
+  min-width: 212px;
+  height: 250px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-listbar.disabled {
+  width: calc(100vw - 20rem);
+  min-width: 212px;
+  height: 3rem;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-listbar .title p {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #fff;
+}
+
+.title {
+  width: 100%;
+  background: #0b3a5e;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title button {
+  background: transparent;
+  margin-right: 2rem;
+}
+
+.title button:hover {
+  cursor: pointer;
+}
+
+.list {
+  overflow-x: hidden;
+  width: calc(100vw - 20rem);
+  min-width: 212px;
+  height: 150px;
+  background: #bbbbbb;
+}
+.list.disabled {
+  display: none;
+}
+.list p {
+  margin-left: 1.24rem;
+}
+
+.list::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+.list::-webkit-scrollbar-track {
+  background: #bbbbbb; /* color of the tracking area */
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #0b3a5e; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #bbbbbb; /* creates padding around scroll thumb */
+}
