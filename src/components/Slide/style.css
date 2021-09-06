@@ -4,4 +4,28 @@
   background: #f4f4f4;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.container-slide p {
+  line-height: 2rem;
+}
+.container-slide p:first-child {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  color: #556367;
+  margin: 0;
+}
+.container-slide p:last-child {
+  font-family: "Kaushan Script", cursive;
+  font-size: 60px;
+  color: #1b75bc;
+  margin: 0;
+  padding-left: 1.2765rem;
+}
+
+@media (max-width: 999px) {
+  .container-slide img:first-child {
+    display: none;
+  }
 }

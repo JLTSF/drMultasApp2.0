@@ -1,8 +1,9 @@
 .container-listbar {
-  width: calc(100vw - 20rem);
-  min-width: 212px;
+  width: calc(100vw - 1.875rem);
+  min-width: 13.25rem;
+  max-width: 58.75rem;
   height: 250px;
-
+  border-radius: 6px;
   overflow: hidden;
 
   display: flex;
@@ -11,8 +12,9 @@
 }
 
 .container-listbar.disabled {
-  width: calc(100vw - 20rem);
-  min-width: 212px;
+  width: calc(100vw - 1.875rem);
+  min-width: 13.25rem;
+  max-width: 58.75rem;
   height: 4rem;
 
   overflow: hidden;
@@ -25,8 +27,8 @@
 .container-listbar .title p {
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  font-size: 2rem;
-  margin-left: 2rem;
+  font-size: 1.625rem;
+  margin-left: 1.875rem;
   color: #fff;
 }
 
@@ -51,25 +53,25 @@
 }
 
 .list {
-  overflow-x: hidden;
-  width: calc(100vw - 20rem);
-  min-width: 212px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   background: #bbbbbb;
+  border-bottom-left-radius: 6px;
+  overflow-x: hidden;
 }
 .list.disabled {
   display: none;
 }
 .list .link {
   display: block;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 1.875rem;
   text-decoration: none;
   color: black;
-  margin-left: 1.24rem;
+  text-transform: uppercase;
 }
 
 .list::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+  width: 1rem; /* width of the entire scrollbar */
 }
 
 .list::-webkit-scrollbar-track {
@@ -80,4 +82,22 @@
   background: #0b3a5e; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid #bbbbbb; /* creates padding around scroll thumb */
+}
+
+@media (max-width: 1440px) {
+  .list .link {
+    font-size: 16px;
+  }
+  .container-listbar .title p {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 360px) {
+  .list .link {
+    font-size: 14px;
+  }
+  .container-listbar .title p {
+    font-size: 22px;
+  }
 }

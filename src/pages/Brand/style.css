@@ -1,15 +1,19 @@
-.container-home {
+.container-brand {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.box {
-  width: 100vw;
-  margin: 4rem;
-  gap: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.box-brand {
+  width: calc(100vw - 6rem);
+  max-width: 58.75rem;
+  min-width: 13.25rem;
+  height: auto;
+  background: #0b3a5e;
+  color: white;
+  display: block;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
   align-items: center;
 }

@@ -41,11 +41,11 @@ export const Brand = () => {
 
   return (
     <>
-      <div className="container-home">
+      <div className="container-brand">
         <Header />
         <Slide />
-        <div className="box">
-          <Link to="/">Voltar</Link>
+        <Link to="/">Voltar</Link>
+        <div className="box-brand">
           {carsModel.map(({ nome }, index) => (
             <p key={index}>{nome}</p>
           ))}
