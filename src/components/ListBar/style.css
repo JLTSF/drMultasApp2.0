@@ -13,7 +13,7 @@
 .container-listbar.disabled {
   width: calc(100vw - 20rem);
   min-width: 212px;
-  height: 3rem;
+  height: 4rem;
 
   overflow: hidden;
 
@@ -32,6 +32,7 @@
 
 .title {
   width: 100%;
+  height: 4rem;
   background: #0b3a5e;
   overflow: hidden;
 
@@ -59,7 +60,11 @@
 .list.disabled {
   display: none;
 }
-.list p {
+.list .link {
+  display: block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: black;
   margin-left: 1.24rem;
 }
 

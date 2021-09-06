@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 type ListProps = {
@@ -21,28 +22,45 @@ export const ListBar = ({ title, data }: ListProps) => {
 
   return (
     <>
-      <div className="container-listbar">
-        <div className="title">
-          <p>{title}</p>
-          <button onClick={() => toggleMenu()}>
-            {isOpen ? (
-              <IoMdArrowDropup size="2rem" color="#fff" />
-            ) : (
-              <IoMdArrowDropdown size="2rem" color="#fff" />
-            )}
-          </button>
-        </div>
-
-        {isOpen ? (
-          <div className="list">
-            {data.map(({ nome }, index) => (
-              <p key={index}>{nome}</p>
-            ))}
+      {isOpen ? (
+        <div className="container-listbar">
+          <div className="title">
+            <p>{title}</p>
+            <button onClick={() => toggleMenu()}>
+              {isOpen ? (
+                <IoMdArrowDropup size="2rem" color="#fff" />
+              ) : (
+                <IoMdArrowDropdown size="2rem" color="#fff" />
+              )}
+            </button>
           </div>
-        ) : (
-          <div className="list disabled"></div>
-        )}
-      </div>
+
+          {isOpen ? (
+            <div className="list">
+              {data.map(({ nome, codigo }, index) => (
+                <NavLink to={`/brand/${codigo}`} key={index} className="link">
+                  {nome}
+                </NavLink>
+              ))}
+            </div>
+          ) : (
+            <div className="list disabled"></div>
+          )}
+        </div>
+      ) : (
+        <div className="container-listbar disabled">
+          <div className="title">
+            <p>{title}</p>
+            <button onClick={() => toggleMenu()}>
+              {isOpen ? (
+                <IoMdArrowDropup size="2rem" color="#fff" />
+              ) : (
+                <IoMdArrowDropdown size="2rem" color="#fff" />
+              )}
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

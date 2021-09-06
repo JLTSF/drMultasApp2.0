@@ -1,12 +1,11 @@
 import React from "react";
-import { Home } from "./pages/Home";
 import "./App.css";
-// import "bootstrap/dist/css/bootstrap.css";
+import { Routes } from "./router";
 
 function App(): JSX.Element {
   return (
     <div className="App">
-      <Home />
+      <Routes />
     </div>
   );
 }
