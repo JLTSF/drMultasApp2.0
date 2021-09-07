@@ -5,6 +5,7 @@ import "./style.css";
 
 type ListProps = {
   title: string;
+  type: string;
   data: BrandT[];
 };
 
@@ -13,7 +14,7 @@ type BrandT = {
   codigo: string;
 };
 
-export const ListBar = ({ title, data }: ListProps) => {
+export const ListBar = ({ title, data, type }: ListProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleMenu() {
@@ -38,7 +39,11 @@ export const ListBar = ({ title, data }: ListProps) => {
           {isOpen ? (
             <div className="list">
               {data.map(({ nome, codigo }, index) => (
-                <NavLink to={`/brand/${codigo}`} key={index} className="link">
+                <NavLink
+                  to={`/brand/${type}/${nome}/${codigo}`}
+                  key={index}
+                  className="link"
+                >
                   {nome}
                 </NavLink>
               ))}

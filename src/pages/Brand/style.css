@@ -8,12 +8,40 @@
   width: calc(100vw - 6rem);
   max-width: 58.75rem;
   min-width: 13.25rem;
-  height: auto;
   background: #0b3a5e;
   color: white;
   display: block;
   padding: 1rem;
   border-radius: 6px;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   align-items: center;
+}
+
+.back {
+  margin-top: 1rem;
+  width: calc(100vw - 6rem);
+  max-width: 58.75rem;
+  min-width: 13.25rem;
+  justify-content: left;
+}
+.back p {
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 33px;
+  margin: 0;
+  color: #0b3a5e;
+}
+
+.spinner-brand {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  margin: auto;
+  top: 60%;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }

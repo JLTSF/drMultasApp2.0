@@ -2,14 +2,13 @@ import React from "react";
 
 import "./style.css";
 
-import left2 from "../../assets/left2.svg";
-import right from "../../assets/right.svg";
+import slide1 from "../../assets/slide1.svg";
 
 export const Slide = () => {
   return (
     <div className="container-slide">
       <div>
-        <img src={left2} alt="" />
+        <img src={slide1} alt="" />
       </div>
       <div>
         <p>Pesquise aqui o</p>
