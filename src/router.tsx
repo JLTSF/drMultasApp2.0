@@ -7,7 +7,8 @@ export const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/brand/:type/:brand/:id" component={Brand} />
+        <Route exact path="/brand/:type/:brand/:id" component={Brand} />{" "}
+        {/*Faz a troca dos componentes da URL */}
       </Switch>
     </BrowserRouter>
   );

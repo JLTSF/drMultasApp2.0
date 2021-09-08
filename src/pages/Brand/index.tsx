@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { api } from "../../services/Api/Api";
 import { AxiosResponse } from "axios";
 import { Slide } from "../../components/Slide";
+import { Spinner } from "../../components/Spinner";
 import "./style.css";
 
 import { collect } from "collect.js";
@@ -37,48 +38,9 @@ export const Brand = () => {
       <>
         <Header />
         <Slide />
-
-        <svg
-          className="spinner-brand"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="25 25 50 50"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            r="20"
-            fill="none"
-            strokeWidth="5"
-            stroke="#0b3a5e"
-            strokeLinecap="round"
-            strokeDashoffset="0"
-            strokeDasharray="100, 200"
-          >
-            <animateTransform
-              attributeName="transform"
-              attributeType="XML"
-              type="rotate"
-              from="0 50 50"
-              to="360 50 50"
-              dur="2.5s"
-              repeatCount="indefinite"
-            />
-            <animate
-              attributeName="stroke-dashoffset"
-              values="0;-30;-124"
-              dur="1.25s"
-              repeatCount="indefinite"
-            />
-            <animate
-              attributeName="stroke-dasharray"
-              values="0,200;110,200;110,200"
-              dur="1.25s"
-              repeatCount="indefinite"
-            />
-          </circle>
-        </svg>
+        <div className="spinner-brand">
+          <Spinner />
+        </div>
       </>
     );
   }

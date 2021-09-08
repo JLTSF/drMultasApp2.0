@@ -14,8 +14,6 @@
   align-items: center;
 }
 .spinner-home {
-  width: 120px;
-  height: auto;
   position: absolute;
   margin: auto;
   top: 0;
