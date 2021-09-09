@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// Importa a funcionalidade do react responsavel por detectar mudança de status no DOM
+// Importa a funcionalidade do react responsavel por detectar mudança de status no HTML
 import { Header } from "../../components/Header";
 
 import { api } from "../../services/Api/Api";
